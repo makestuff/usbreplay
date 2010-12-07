@@ -1,0 +1,21 @@
+Work-in-progress parser for processing USBTrace XML logs. The Python script
+parses the XML and generates a simple easily-parseable text file describing
+what happened on the USB bus (i.e, which endpoints were read from or written
+to, and with what data). The C program just parses that text file and
+constructs data structures appropriate for integration with libusb to replay
+the messages grabbed by USBTrace. No libusb integration yet though - it just
+prints the data in a slightly different format.
+
+The project build assumes a directory structure like this:
+
+src
+|
++-apps
+| |
+| +-replay
+|
++-libs
+
+*** BUILDING ON LINUX ***
+
+make -f Makefile.linux
