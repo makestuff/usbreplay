@@ -15,14 +15,14 @@
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #
 ../../include:
-	wget http://github.com/makestuff/include/tarball/master
-	tar xvzf makestuff-include-*.tar.gz
-	rm makestuff-include-*.tar.gz
+	wget -O include.tgz --no-check-certificate http://github.com/makestuff/include/tarball/master
+	tar xvzf include.tgz
+	rm include.tgz
 	mv makestuff-include* ../../include
 
 ../../libs/dump:
-	wget http://github.com/makestuff/dump/tarball/master
-	tar xvzf makestuff-dump-*.tar.gz
-	rm makestuff-dump-*.tar.gz
+	wget -O dump.tgz --no-check-certificate http://github.com/makestuff/dump/tarball/master
+	tar xvzf dump.tgz
+	rm dump.tgz
 	mkdir -p ../../libs
 	mv makestuff-dump* ../../libs/dump
