@@ -6,16 +6,12 @@ constructs data structures appropriate for integration with libusb to replay
 the messages grabbed by USBTrace. No libusb integration yet though - it just
 prints the data in a slightly different format.
 
-The project build assumes a directory structure like this:
+The project builds using the MakeStuff build infrastructure, like this:
 
-src
-|
-+-apps
-| |
-| +-replay
-|
-+-libs
-
-*** BUILDING ON LINUX ***
-
-make -f Makefile.linux
+mkdir $HOME/20161106
+cd $HOME/20161106
+wget -qO- http://tiny.cc/msbil | tar zxf -
+cd makestuff/apps
+../scripts/msget.sh makestuff/usbreplay/20161106
+cd usbreplay
+make deps

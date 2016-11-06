@@ -1,5 +1,5 @@
 /* 
- * Copyright (C) 2010 Chris McClelland
+ * Copyright (C) 2010,2016 Chris McClelland
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -18,8 +18,8 @@
 #include <stdlib.h>
 #include <string.h>
 #include <ctype.h>
-#include "dump.h"
-#include "types.h"
+#include "libdump.h"
+#include "makestuff.h"
 
 unsigned char *readFile(const char *name, long *length);
 

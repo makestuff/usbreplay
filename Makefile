@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2009-2010 Chris McClelland
+# Copyright (C) 2010,2016 Chris McClelland
 #
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -14,15 +14,9 @@
 # You should have received a copy of the GNU General Public License
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #
-../../include:
-	wget -O include.tgz --no-check-certificate https://github.com/makestuff/include/tarball/master
-	tar xvzf include.tgz
-	rm include.tgz
-	mv makestuff-include* ../../include
+ROOT    := $(realpath ../..)
+DEPS    := dump
+TYPE    := exe
+SUBDIRS :=
 
-../../libs/dump:
-	wget -O dump.tgz --no-check-certificate https://github.com/makestuff/dump/tarball/master
-	tar xvzf dump.tgz
-	rm dump.tgz
-	mkdir -p ../../libs
-	mv makestuff-dump* ../../libs/dump
+-include $(ROOT)/common/top.mk
